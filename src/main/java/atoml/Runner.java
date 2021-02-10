@@ -36,7 +36,8 @@ public class Runner {
 	    final boolean generateMorphTests = !cmdParameters.hasOption("nomorph");
 	    System.setProperty("atoml.savepredictions", String.valueOf(cmdParameters.hasOption("predictions")));
 
-		System.setProperty("atoml.weka.timeout", String.valueOf(1000 * cmdParameters.getIntegerValue("timeout")));
+		System.setProperty("atoml.AIToolBox.timeout", String.valueOf(0));
+	    System.setProperty("atoml.weka.timeout", String.valueOf(1000 * cmdParameters.getIntegerValue("timeout")));
 		System.setProperty("atoml.sklearn.timeout", String.valueOf(1 * cmdParameters.getIntegerValue("timeout")));
 		System.setProperty("atoml.spark.timeout", String.valueOf(1000 * cmdParameters.getIntegerValue("timeout")));
 		System.setProperty("atoml.caret.timeout", String.valueOf(1 * cmdParameters.getIntegerValue("timeout")));

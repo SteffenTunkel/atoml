@@ -29,6 +29,7 @@ public class YamlTestgenerationTest {
 		System.setProperty("atoml.sklearn.timeout", String.valueOf(1000));
 		System.setProperty("atoml.spark.timeout", String.valueOf(1000000));
 		System.setProperty("atoml.caret.timeout", String.valueOf(1000));
+		System.setProperty("atoml.AIToolBox.timeout", String.valueOf(0));
 		List<Algorithm> algorithms = YamlClassifierGenerator.parseFile("testdata/descriptions.yml");
 		int numFeatures = 10;
 		int numInstances = 100;
